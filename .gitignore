@@ -1,5 +1,5 @@
 # CMake build directories
-cmake-build-*/
+build/
 
 # CLion / JetBrains
 .idea/
