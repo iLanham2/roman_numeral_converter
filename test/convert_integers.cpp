@@ -11,7 +11,7 @@ class ConvertIntegersToRomanNumerals : public testing::TestWithParam<RomanNumera
 
 TEST_P(ConvertIntegersToRomanNumerals, ConvertInteger) {
     auto [input, expected] = GetParam();
-    EXPECT_EQ(expected, convertInteger(input));
+    EXPECT_EQ(expected, convertIntToRoman(input));
 }
 
 INSTANTIATE_TEST_SUITE_P(

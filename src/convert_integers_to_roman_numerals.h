@@ -1,6 +1,6 @@
 #include <string>
 
-std::string convertInteger(int number)
+std::string convertIntToRoman(int number)
 {
     if (number == 4)
     {
