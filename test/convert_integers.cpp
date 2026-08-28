@@ -22,6 +22,7 @@ INSTANTIATE_TEST_SUITE_P(
         RomanNumeralTestCase{2, "II"},
         RomanNumeralTestCase{3, "III"},
         RomanNumeralTestCase{4, "IV"},
-        RomanNumeralTestCase{5, "V"}
+        RomanNumeralTestCase{5, "V"},
+        RomanNumeralTestCase{6, "VI"}
     )
 );

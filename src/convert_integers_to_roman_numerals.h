@@ -11,6 +11,11 @@ std::string convertIntToRoman(int number)
     {
         return "V";
     }
+
+    if (number == 6)
+    {
+        return "VI";
+    }
     
     return std::string(number,'I');
 }
