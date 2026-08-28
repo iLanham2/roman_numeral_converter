@@ -2,20 +2,18 @@
 
 std::string convertIntToRoman(int number)
 {
+    std::string romanNumeral{};
+
+    if (number >= 5)
+    {
+        romanNumeral += "V";
+        number -= 5;
+    }
+
     if (number == 4)
     {
         return "IV";
-    }
-
-    if (number == 5)
-    {
-        return "V";
-    }
-
-    if (number == 6)
-    {
-        return "VI";
-    }
-    
-    return std::string(number,'I');
+    }    
+  
+    return (romanNumeral + std::string(number,'I'));
 }
