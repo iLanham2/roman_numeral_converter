@@ -11,3 +11,7 @@ TEST(ConverIntegersToRomanNumerals, ConvertOne) {
 TEST(ConvertIntegersToRomanNumerals, ConvertTwo) {
     EXPECT_EQ("II", convertInteger(2));
 }
+
+TEST(ConvertIntegersToRomanNumerals, ConvertThree) {
+    EXPECT_EQ("III", convertInteger(3));
+}

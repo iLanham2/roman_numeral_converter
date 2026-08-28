@@ -6,5 +6,10 @@ std::string convertInteger(int number)
     {
         return "I";
     }
-    return "II";
+
+    if (number == 2)
+    {
+       return "II";
+    }
+    return "III";
 }
