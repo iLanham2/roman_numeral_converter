@@ -2,16 +2,24 @@
 #include <gtest/gtest.h>
 #include "convert_integers_to_roman_numerals.h"
 
+struct RomanNumeralTestCase {
+    int input;
+    std::string expected;
+};
 
-TEST(ConverIntegersToRomanNumerals, ConvertOne) {
+class ConvertIntegersToRomanNumerals : public testing::TestWithParam<RomanNumeralTestCase> {};
 
-    EXPECT_EQ("I", convertInteger(1));
+TEST_P(ConvertIntegersToRomanNumerals, ConvertInteger) {
+    auto [input, expected] = GetParam();
+    EXPECT_EQ(expected, convertInteger(input));
 }
 
-TEST(ConvertIntegersToRomanNumerals, ConvertTwo) {
-    EXPECT_EQ("II", convertInteger(2));
-}
-
-TEST(ConvertIntegersToRomanNumerals, ConvertThree) {
-    EXPECT_EQ("III", convertInteger(3));
-}
+INSTANTIATE_TEST_SUITE_P(
+    SmallIntegers,
+    ConvertIntegersToRomanNumerals,
+    testing::Values(
+        RomanNumeralTestCase{1, "I"},
+        RomanNumeralTestCase{2, "II"},
+        RomanNumeralTestCase{3, "III"}
+    )
+);
