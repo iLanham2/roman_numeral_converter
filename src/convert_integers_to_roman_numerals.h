@@ -4,6 +4,11 @@ std::string convertIntToRoman(int number)
 {
     std::string romanNumeral{};
 
+    if (number == 9)
+    {
+        return "IX";
+    }
+
     if (number >= 5)
     {
         romanNumeral += "V";
@@ -13,7 +18,7 @@ std::string convertIntToRoman(int number)
     if (number == 4)
     {
         return "IV";
-    }    
-  
+    }
+
     return (romanNumeral + std::string(number,'I'));
 }
