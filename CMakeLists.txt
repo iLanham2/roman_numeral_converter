@@ -15,10 +15,12 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-add_executable(c___skeleton src/main.cpp)
+add_executable(c___skeleton src/main.cpp src/convert_integers_to_roman_numerals.h)
 
 add_executable(c___skeleton_test
         test/convert_integers.cpp)
+
+target_include_directories(c___skeleton_test PRIVATE src)
 
 target_link_libraries(c___skeleton_test
         PRIVATE

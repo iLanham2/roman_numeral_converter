@@ -1,14 +1,7 @@
 // tests/dummy_test.cpp
 #include <gtest/gtest.h>
+#include "convert_integers_to_roman_numerals.h"
 
-std::string convertInteger(int number)
-{
-    if (number == 1)
-    {
-        return "I";
-    }
-    return "II";
-}
 
 TEST(ConverIntegersToRomanNumerals, ConvertOne) {
 
