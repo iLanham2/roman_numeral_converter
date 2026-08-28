@@ -3,10 +3,18 @@
 
 std::string convertInteger(int number)
 {
-    return "I";
+    if (number == 1)
+    {
+        return "I";
+    }
+    return "II";
 }
 
 TEST(ConverIntegersToRomanNumerals, ConvertOne) {
 
     EXPECT_EQ("I", convertInteger(1));
+}
+
+TEST(ConvertIntegersToRomanNumerals, ConvertTwo) {
+    EXPECT_EQ("II", convertInteger(2));
 }
