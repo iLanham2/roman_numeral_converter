@@ -23,7 +23,8 @@ std::string convertIntToRoman(int number)
 
     if (number == 4)
     {
-        return "IV";
+        romanNumeral += "IV";
+        number -= 4;
     }
 
     return (romanNumeral + std::string(number,'I'));
