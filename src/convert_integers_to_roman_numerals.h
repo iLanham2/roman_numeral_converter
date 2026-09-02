@@ -6,6 +6,8 @@ std::string convertIntToRoman(int number)
 {
     std::string romanNumeral{};
 
+    addNumeral(number, romanNumeral, 40, "XL");
+    
     addNumeral(number, romanNumeral, 10, "X");
 
     addNumeral(number, romanNumeral, 9, "IX");
