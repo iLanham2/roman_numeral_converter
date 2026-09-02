@@ -31,6 +31,7 @@ INSTANTIATE_TEST_SUITE_P(
         RomanNumeralTestCase{19, "XIX"},
         RomanNumeralTestCase{20, "XX"},
         RomanNumeralTestCase{40, "XL"},
-        RomanNumeralTestCase{50, "L"}
+        RomanNumeralTestCase{50, "L"},
+        RomanNumeralTestCase{90, "XC"}
     )
 );
