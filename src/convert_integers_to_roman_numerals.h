@@ -19,7 +19,7 @@ std::string convertIntToRoman(int number)
 
 void addNumeral(int &number, std::string &romanNumeral, int numeralValue, std::string numeralCharacters)
 {
-    if (number >= numeralValue)
+    while (number >= numeralValue)
     {
         romanNumeral += numeralCharacters;
         number -= numeralValue;
