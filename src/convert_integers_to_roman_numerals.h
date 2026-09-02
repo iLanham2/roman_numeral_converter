@@ -14,7 +14,9 @@ std::string convertIntToRoman(int number)
 
     addNumeral(number, romanNumeral, 4, "IV");
 
-    return (romanNumeral + std::string(number,'I'));
+    addNumeral(number, romanNumeral, 1, "I");
+
+    return romanNumeral;
 }
 
 void addNumeral(int &number, std::string &romanNumeral, int numeralValue, std::string numeralCharacters)
