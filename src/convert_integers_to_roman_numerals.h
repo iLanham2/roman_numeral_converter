@@ -1,12 +1,12 @@
 #include <string>
 
-void addNumeral(int &number, std::string &romanNumeral);
+void addNumeral(int &number, std::string &romanNumeral, int numeralValue, std::string numeralCharacters);
 
 std::string convertIntToRoman(int number)
 {
     std::string romanNumeral{};
 
-    addNumeral(number, romanNumeral);
+    addNumeral(number, romanNumeral, 10, "X");
 
     if (number >= 9)
     {
@@ -29,11 +29,11 @@ std::string convertIntToRoman(int number)
     return (romanNumeral + std::string(number,'I'));
 }
 
-void addNumeral(int &number, std::string &romanNumeral)
+void addNumeral(int &number, std::string &romanNumeral, int numeralValue, std::string numeralCharacters)
 {
-    if (number >= 10)
+    if (number >= numeralValue)
     {
-        romanNumeral += "X";
-        number -= 10;
+        romanNumeral += numeralCharacters;
+        number -= numeralValue;
     }
 }
