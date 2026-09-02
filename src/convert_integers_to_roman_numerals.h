@@ -11,7 +11,15 @@ std::string convertIntToRoman(int number)
         std::string Character;
     };
 
-    std::vector<RomanNumeral> romanNumerals = {{50, "L"}, {40,"XL"}, {10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}};
+    std::vector<RomanNumeral> romanNumerals = {
+        {50, "L"},
+        {40,"XL"},
+        {10, "X"}, 
+        {9, "IX"}, 
+        {5, "V"}, 
+        {4, "IV"}, 
+        {1, "I"}
+    };
     std::string romanNumeral{};
 
     for (auto romanItem: romanNumerals)
