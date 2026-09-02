@@ -1,22 +1,23 @@
 #include <string>
+#include <vector>
 
 void addNumeral(int &number, std::string &romanNumeral, int numeralValue, std::string numeralCharacters);
 
 std::string convertIntToRoman(int number)
 {
+    struct RomanNumeral
+    {
+        int value;
+        std::string Character;
+    };
+
+    std::vector<RomanNumeral> romanNumerals = {{40,"XL"}, {10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}};
     std::string romanNumeral{};
 
-    addNumeral(number, romanNumeral, 40, "XL");
-    
-    addNumeral(number, romanNumeral, 10, "X");
-
-    addNumeral(number, romanNumeral, 9, "IX");
-
-    addNumeral(number, romanNumeral, 5, "V");
-
-    addNumeral(number, romanNumeral, 4, "IV");
-
-    addNumeral(number, romanNumeral, 1, "I");
+    for (auto romanItem: romanNumerals)
+    {
+        addNumeral(number, romanNumeral, romanItem.value, romanItem.Character);
+    }
 
     return romanNumeral;
 }
