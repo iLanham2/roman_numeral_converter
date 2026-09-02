@@ -8,23 +8,11 @@ std::string convertIntToRoman(int number)
 
     addNumeral(number, romanNumeral, 10, "X");
 
-    if (number >= 9)
-    {
-        romanNumeral += "IX";
-        number -= 9;
-    }
+    addNumeral(number, romanNumeral, 9, "IX");
 
-    if (number >= 5)
-    {
-        romanNumeral += "V";
-        number -= 5;
-    }
+    addNumeral(number, romanNumeral, 5, "V");
 
-    if (number >= 4)
-    {
-        romanNumeral += "IV";
-        number -= 4;
-    }
+    addNumeral(number, romanNumeral, 4, "IV");
 
     return (romanNumeral + std::string(number,'I'));
 }
